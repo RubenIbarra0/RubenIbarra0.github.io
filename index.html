@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Ruben</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div><a href="#">Ruben</a></div>
+      <ul class="linksSection">
+        <a href="#inicio" class="active"><li>Inicio</li></a>
+        <a href="#acerca"><li>Acerca</li></a>
+        <a href="#skills"><li>Habilidades</li></a>
+        <a href="#contacto"><li>Contacto</li></a>
+      </ul>
+    </nav>
+
+    <section id="inicio">
+      <div class="about">
+        <h1 class="title">
+          Hola! soy <span class="nombre">Ruben</span> <br />
+          <span class="typed"></span>
+        </h1>
+
+        <a class="btnsS_CV" href="docs/CV Ruben Ibarra.pdf" download>Descarga mi CV</a>
+      </div>
+
+      <div class="contenedorImg"><img src="imagenes/me.jpeg" alt="yo" /></div>
+    </section>
+
+    <section id="acerca">
+      <h1 class="title_acerca">Acerca de mi</h1>
+      <img class="img_acerca" src="imagenes/facebook.png" alt="ggg">
+      <div class="p_acerca">
+      <p>
+    Estudiante de ingeniería en mi noveno trimestre en la Universidad Autónoma Metropolitana, futuro desarrollador Fullstack. 
+    Me gusta enfrentar problemas y resolverlos.
+  </p>
+</div>
+    </section>
+    <section id="skills">
+      <h1>Skills</h1>
+      <ul>
+        <li> <img  class="skills_Img" src="imagenes/HTML 5.png" alt="html">HTML</li>
+        <li> <img  class="skills_Img" src="imagenes/CSS-Logo.png" alt="css">CSS</li>
+        <li> <img  class="skills_Img" src="imagenes/js.png" alt="js">JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h1 class="title_contacto">Ponte en Contacto</h1>
+      <div class="iconosContacto">
+        <ul>
+          <li>
+            <a href="https://wa.me/5586142935" target="_blank"
+              ><img src="imagenes/whatsapp.png" alt="WA"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ruben_ibarra._/" target="_blank">
+              <img src="imagenes/instagram.png" alt="ig"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <form class="contactoForm" id='form_contacto' action="https://formsubmit.co/aaa02a1e30b06d29f9aec84d7b794a2e" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required />
+
+        <input type="email" name="email" placeholder="Email" required />
+
+        <textarea
+          type="text"
+          name="mensaje"
+          placeholder="Escribe tu mensaje aquí"
+          cols="50"
+          rows="5"
+          required
+        ></textarea>
+
+        <input class="btnsS_CV" type="submit" value="Enviar" />
+        <input type="hidden" name="_next" value="http://192.168.56.1:5500/">
+        <input type="hidden" name="_captcha" value="false">
+      </form>
+    </section>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
