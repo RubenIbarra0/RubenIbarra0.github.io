@@ -1,10 +1,18 @@
 let menuNav = document.querySelectorAll('.linksSection a');
 
+const btnTelefono = document.getElementById('menu_telefono');
+const linksSection= document.querySelector('.linksSection');
+
+
+btnTelefono.addEventListener("click",()=>{
+    linksSection.classList.toggle("show");
+});
+
 const typed = new Typed('.typed', {
     strings: [
-        'Frontend Developer', 
+        'Estudiante', 
         'Calistenico',
-        'Estudiante'
+        'Autodidacta'
     ],
     typeSpeed: 70,
     backSpeed: 75,
