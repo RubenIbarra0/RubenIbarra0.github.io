@@ -40,14 +40,24 @@ nav > div > a {
   font-size: 25px;
 }
 .linksSection,
-ul {
+ul, .desplegableLinks{
   display: flex;
 }
 .linksSection li,
-#skills li {
+#skills li, .desplegableLinks li {
   list-style-type: none;
   padding: 5px 15px;
   color: white;
+}
+.desplegableLinks{
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #03055ed8;
+  color: white;
+  border: 1px solid black;
+  padding-bottom: 5px;
 }
 .menu_toggle{
   display: none;
@@ -58,14 +68,6 @@ ul {
   height: 3px;
   width: 25px;
   margin: 3px;
-}
-@media screen and (max-width: 768px){
-  .linksSection{
-    display: none;
-  }
-  .menu_toggle{
-    display: flex;
-  }
 }
 
 a {
@@ -79,6 +81,23 @@ a:hover {
 }
 .linksSection a.active {
   border-bottom: 2px solid #ff6600;
+}
+
+@media screen and (max-width: 768px){
+  nav{
+    display: flex;
+    margin: 0 auto;
+  }
+  .linksSection{
+    display: none;
+  }
+  .menu_toggle{
+    display: flex;
+  }
+.desplegableLinks.show{
+  display: inline;
+}
+  
 }
 
 #inicio {
@@ -131,12 +150,15 @@ a:hover {
   width: 400px;
   contain: cover;
 }
-.contenedorImg img:hover {
-  width: 410px;
-  box-shadow: 5px 5px 20px 10px #000000;
+@media screen and(min-width:768px) {
+  .contenedorImg img:hover {
+    width: 410px;
+    box-shadow: 5px 5px 20px 10px #000000;
+  }
+    
 }
 #acerca {
-  height: 100vh;
+  height: 100%;
   padding: 20px 200px ;
   color: white;
   display: grid;
@@ -183,15 +205,19 @@ a:hover {
   margin-bottom: 5px;
   font-size: 40px;
 }
+#skills ul{
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
 .skills_Img {
   width: auto;
   height: 70px;
   margin-bottom: 5px;
+  vertical-align: middle;
 }
-#skills li {
-  display: flex;
-  align-items: center;
-}
+
 
 #contacto {
   height: 100vh;
@@ -258,30 +284,32 @@ textarea {
 
 @media screen and (max-width: 768px){
   #inicio{
-    height: auto;
+    height: 100vh;
     padding: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
-  gap: 30px;
+    
+    gap: 30px;
   }
   .title{
-    font-size: 20px;
-  
+    font-size: 30px;
   }
   .contenedorImg img{
     width: 250px;
     margin-bottom: 10px;
   }
-  
+
 .btnsS_CV {
   width: 160px;
 }
   #acerca{
-    display: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
-  #skills{
+  #acerca img{
     display: none;
-    
   }
   #contacto {
     display: flex;
