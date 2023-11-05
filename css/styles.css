@@ -86,7 +86,8 @@ a:hover {
 @media screen and (max-width: 768px){
   nav{
     display: flex;
-    margin: 0 auto;
+    justify-content: initial;
+    gap: 70%;
   }
   .linksSection{
     display: none;
@@ -97,7 +98,6 @@ a:hover {
 .desplegableLinks.show{
   display: inline;
 }
-  
 }
 
 #inicio {
@@ -284,7 +284,7 @@ textarea {
 
 @media screen and (max-width: 768px){
   #inicio{
-    height: 100vh;
+    height: 100%;
     padding: 0;
     width: 100%;
     display: flex;

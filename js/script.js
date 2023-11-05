@@ -5,7 +5,6 @@ const desplegableLinks= document.querySelector('.desplegableLinks');
 btnTelefono.addEventListener("click",function(event){
     event.stopPropagation()
     desplegableLinks.classList.toggle('show');
-
 });
 document.addEventListener('click', function(event){
     if(!desplegableLinks.contains(event.target) && desplegableLinks.classList.contains('show')){
